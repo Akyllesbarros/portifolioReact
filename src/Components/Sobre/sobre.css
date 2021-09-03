@@ -1,0 +1,23 @@
+/* *{
+    border: black solid 1px;
+} */
+
+.sobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 8rem;
+    text-align: right;    
+    line-height: 8.8rem;
+}
+
+.sobre p{
+    padding-left: 0;
+    padding-right: 0;
+    width: 20rem;
+    margin: 2rem;
+}

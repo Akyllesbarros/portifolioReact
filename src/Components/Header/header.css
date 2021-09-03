@@ -1,0 +1,11 @@
+
+.header {
+    background-color: #1F203A;
+    padding: 0.5rem 0;
+}
+
+.header img {
+    width: 4rem;
+    margin-left: 6rem;
+    background-color: transparent;
+}

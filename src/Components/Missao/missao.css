@@ -1,0 +1,28 @@
+
+
+.missao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h3 {
+    font-size: 4rem;
+    width: 40rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.missao img{
+    margin: 0 auto;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+h4{
+    font-size: 2rem;
+    font-weight: 600;
+}
