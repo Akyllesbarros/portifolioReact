@@ -30,7 +30,7 @@ console.log(GameList)
                 {GameList.map((item) => (
                     <li key={item.id}>
                         <h3>{item.nameCase}</h3>
-                        <img src={item.imagemUrl} alt={"Nome do projeto" + item.nameCase}/>
+                        <img src={item.imagemUrl} alt={item.nameCase}/>
                         <button onClick={()=>selected(item)}>Saiba Mais</button>
                     </li>
                 ))}
