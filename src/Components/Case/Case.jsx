@@ -14,14 +14,14 @@ const caseList = [{
 
 export default function Case(){
 
-  const [selectItem, setSelectItem] = useState();
+  const [nex, setNext] = useState();
   const [GameList, setGameList] = useState(caseList.sort((a, b) => (a.nameCase > b.nameCase ? 1 : -1))); 
-console.log(GameList)
 
-  const selected =(item) =>{
-    setSelectItem(item);
 
-  }
+  // const next =() =>{
+    
+
+  // }
   GameList.map(item => console.log(item))
   return (
     <>
@@ -31,9 +31,9 @@ console.log(GameList)
                     <li key={item.id}>
                         <h3>{item.nameCase}</h3>
                         <img src={item.imagemUrl} alt={item.nameCase}/>
-                        <button onClick={()=>selected(item)}>Saiba Mais</button>
                     </li>
                 ))}
+                {/* <button onClick={()=>}>---></button> */}
             </ul>
             </div>
           
