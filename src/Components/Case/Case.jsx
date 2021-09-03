@@ -1,43 +1,43 @@
 
 import React,{useState} from 'react';
-import './App.css';
-// import { Modal } from './components/Modal';
-
+import './case.css';
+import mycrab from '../../Images/eu.jpg'
 
 const caseList = [{
     id: 1,
     nameCase: "The Crab",
-    imageUrl: "https://wallpapercave.com/wp/wp2532627.jpg",
-    Github: "https://www.youtube.com/embed/tMzpLnQtVuE",
-    description: "Chame os amigos e joguem juntos. O Dota é um jogo complexo e em constante evolução, mas nunca é tarde demais para começar. Aprenda o básico jogando cooperativamente contra bots. Aprimore as suas habilidades no modo de teste de heróis. Entre de cabeça no sistema de criação de partidas, que usa o seu comportamento e nível de habilidade para garantir que você jogará com os jogadores certos a cada partida.",
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT0q4qdmgu9jKt1sWYz99RHPuOrq427JpwHvOWwjlIvRX4hJ-XLDcpYR9itemhEhmulD1Ahs&usqp=CAU',
+    Github: "https://github.com/Akyllesbarros/projetoiteminal_modulo01-blueedtech.git",
+    description: "Projeto iteminal do curso de certiitemicação da Blue EdTech apresentado avaliação do iteminal do módulo I - Lógica de programação - sobre um jogo de itemicção interativa usando todos os conceitos aprendidos no decorrer do módulo. Como requisito obrigatório, neste projeto itemoi itemeito o uso de classe. O trabalho itemoi desenvolvido em grupo..",
   },
 ];  
 
-export default function Case () {
+export default function Case(){
 
-  const [selectItem,setSelectItem] = useState();
-  const [caseList, setGameList] = useState(); 
-  const [showModal,setShowModal] = useState(false);
+  const [selectItem, setSelectItem] = useState();
+  const [GameList, setGameList] = useState(caseList.sort((a, b) => (a.nameCase > b.nameCase ? 1 : -1))); 
+console.log(GameList)
+
   const selected =(item) =>{
     setSelectItem(item);
-    setShowModal(true);
+
   }
-    return (
-      <>
-        <div className="">
-            <div className="cardContent">
+  GameList.map(item => console.log(item))
+  return (
+    <>
+      <div className="cardContent">
             <ul>
-                {caseList.map((f) => (
-                    <li key={f.id}>
-                        <h3>{f.nomeJogo}</h3>
-                        <img src={f.imagemUrl} alt={"Capa do Jogo" + f.nomeJogo}/>
-                        {/* <button onClick={()=>selected(f)}>Saiba Mais</button> */}
+                {GameList.map((item) => (
+                    <li key={item.id}>
+                        <h3>{item.nameCase}</h3>
+                        <img src={item.imagemUrl} alt={"Nome do projeto" + item.nameCase}/>
+                        <button onClick={()=>selected(item)}>Saiba Mais</button>
                     </li>
                 ))}
             </ul>
             </div>
-            {/* <Modal selectedGame={selectItem} showModal={showModal} setShowModal={setShowModal} /> */}
-        </div>
-      </>
-    );
-};
+          
+    </>
+
+  )
+}
